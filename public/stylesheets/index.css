@@ -1,14 +1,14 @@
 body{
 	font-family: ltc-bodoni-175;
 }
-nav a{
+.main-menu a{
 	text-decoration:none;
 	color: black;
 	width: 18%;
 	padding: 0 1em;
 	font-size: 1.3em;
 }
-nav{
+.main-menu{
 	color: black;
 	height: auto;
 	z-index: 1;
@@ -22,18 +22,18 @@ nav{
 	text-align: center;
 }
 
-nav .fa-bars{
+.main-menu .fa-bars{
 	display: none;
 	outline: 0 !important;
 	background: none !important;
 	border: 0 !important;
 }
-h1{
+.main-title{
 	display: inline-block;
 	vertical-align: middle;
 
 }
-h1 img{
+.main-title img{
 	width: 2em;
 }
 strong{
@@ -55,12 +55,6 @@ h2{
 	margin: 2em auto;
 }
 
-#about .quote{
-	font-size: 1.5em;
-	font-style: italic;
-	margin: 1em;
-	font-weight: 400;
-}
 #about,#portofolio,#know{
 	border-bottom: 2px solid #F1F1F1;
 }
@@ -83,9 +77,9 @@ h2{
 	padding-top: 29.8%;
 	height: 0;
 	content: '';
-	float: left;
+	float: right;
 	background-position: center center;
-	margin-right: 2em;
+	margin-left: 2em;
 	margin-bottom: 1em;
 }
 .cards-container{
@@ -96,11 +90,11 @@ h2{
 	-webkit-flex-wrap: wrap;
 	align-content: stretch;
 }
-.cards-container .work:hover{
+.work:hover{
 	opacity: 0.5;
 }
 
-.cards-container .work{
+.work{
 	flex: 1;
 	min-width: 300px;
 	margin: 1em 2em;
@@ -118,7 +112,7 @@ h2{
 	padding-bottom: 1em;
 	
 }
-.cards-container .card-know{
+.card-know{
 	flex:1;
 	font-family: "Lora";
 	min-width: 200px;
@@ -224,19 +218,19 @@ ul.social li a:hover:before{
 
 @media screen and (max-width: 720px) {
 
-	h1{
+	.main-title{
 		position: fixed;
 		top: .5em;
 		left: 50%;
 	}
-	nav a{ 
+	.main-menu a{ 
 		display:none;
 		padding: .5em;
 		width: 100%;
 		text-align: center;
 	}
 	
-	nav .fa-bars{
+	.fa-bars{
 		float: left;
 		display: inline-block;
 		outline: 0 !important;
