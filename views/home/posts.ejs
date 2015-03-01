@@ -1,8 +1,9 @@
 
 <% include ../header %>
-<% posts.forEach( function( post ){ %>
 <section class="container">
-  <p><%= post.title %></p>
- </section>
-<% }); %>
+<h2>Posts</h2>
+	<% posts.forEach( function( post ){ %>
+	  <p><%= post.title %></p>
+	<% }); %>
+</section>
 <% include ../footer %>
