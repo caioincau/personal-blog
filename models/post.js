@@ -5,6 +5,7 @@ module.exports = function(app){
 		title: String,
 		private: Boolean,
 		text: String,
+		tags: [],
 		createdAt:  { type: Date, default: Date.now }
 	});
 
