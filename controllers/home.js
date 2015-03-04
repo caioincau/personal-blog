@@ -25,8 +25,9 @@ module.exports = function(app) {
 				params = {posts:posts};
 				res.render('home/posts',params);
 			});
-
-
+		},
+		formLogin:function(req,res){
+			res.render('post/formLogin');
 		}
 	};
 	return HomeController;
