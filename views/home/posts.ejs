@@ -1,9 +1,13 @@
 
 <% include ../header %>
-<section class="container">
+<section class="container container-posts">
 <h2>Posts</h2>
 	<% posts.forEach( function( post ){ %>
-	  <p><%= post.title %></p>
+	<div class="post">
+		<p class="post-date"><%= post.createdAt.toDateString() %></p>
+	  	<p class="post-title"><%= post.title %></p>
+	  	<p class= "post-text"><%- post.text %></p>
+	</div>
 	<% }); %>
 </section>
 <% include ../footer %>
