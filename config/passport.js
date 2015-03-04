@@ -1,6 +1,7 @@
 // config/passport.js
 
 // load all the things we need
+var db = require('../config/db_connect')();
 
 var LocalStrategy   = require('passport-local').Strategy;
 

@@ -8,15 +8,10 @@ var express = require('express')
     , session = require('express-session')
     , app = express();
 
-global.db = mongoose.connect('mongodb://localhost/blog');
 
-var db = mongoose.connection;
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function (callback) {
-  // yay!
-});
-
-
+load('models')
+    .then('controllers')
+    .into(app);
 require('./config/passport')(passport);
 
 app.set('views', __dirname + '/views');
@@ -39,14 +34,12 @@ app.use(passport.session()); // persistent login sessions
 app.use(flash()); // use connect-flash for flash messages stored in session
 app.use(express.static(__dirname + '/public'));
 
-load('models')
-    .then('controllers')
-    .then('routes')
-    .into(app);
+
 
 require('./routes/login.js')(app, passport); 
+require('./routes/home.js')(app);
 
 
-app.listen(3000, function(){
+app.listen(3030, function(){
   console.log("Blog no ar.");
 });

@@ -1,3 +1,6 @@
+var db = require('mongoose');
+
+
 module.exports = function(app){
 	var Schema = require('mongoose').Schema;
 

@@ -2,6 +2,7 @@
 // load the things we need
 var Schema = require('mongoose').Schema;
 var bcrypt   = require('bcrypt-nodejs');
+var db = require('mongoose');
 
 // define the schema for our user model
 
